@@ -92,7 +92,16 @@ if len(sys.argv) == 4:
             print(f'Texto Descriptogradado: {texto_descriptogradado}')
         elif tipo == 'descriptografar':
             
-            print('fazer o que tem que fazer se for pra descriptografar')       
+            texto_descriptogradado = descriptografar(textopuro,chave)
+
+            arquivo_texto = arquivo_texto[:len(arquivo_texto) - 4] + '.txt' 
+
+            # criar um novo arquivo e salvar nele o texto descriptografado
+            arquivo_novo = open(arquivo_texto,'w+')
+            arquivo_novo.write(texto_descriptogradado)
+            arquivo_novo.close()
+          
+            print(f'Texto Descriptogradado: {texto_descriptogradado}')       
 
                 
 
