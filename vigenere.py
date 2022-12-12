@@ -78,7 +78,7 @@ if len(sys.argv) == 4:
         if tipo == 'criptografar':        
 
             textocifrado = criptografar(textopuro,chave)
-            texto_descriptogradado = descriptografar(textocifrado,chave)
+            #texto_descriptogradado = descriptografar(textocifrado,chave)
 
             arquivo_texto = arquivo_texto[:len(arquivo_texto) - 4] + '.txt' 
 
@@ -89,7 +89,7 @@ if len(sys.argv) == 4:
 
             # imprimindo na tela o texto cifrado que foi salvo no arquivo
             print(f'Texto crifrado: {textocifrado}')
-            print(f'Texto Descriptogradado: {texto_descriptogradado}')
+            #print(f'Texto Descriptogradado: {texto_descriptogradado}')
         elif tipo == 'descriptografar':
             
             texto_descriptogradado = descriptografar(textopuro,chave)
@@ -99,8 +99,7 @@ if len(sys.argv) == 4:
             # criar um novo arquivo e salvar nele o texto descriptografado
             arquivo_novo = open(arquivo_texto,'w+')
             arquivo_novo.write(texto_descriptogradado)
-            arquivo_novo.close()
-          
+            arquivo_novo.close()          
             print(f'Texto Descriptogradado: {texto_descriptogradado}')       
 
                 
